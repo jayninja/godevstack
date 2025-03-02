@@ -1,0 +1,5 @@
+
+dnf install docker -y
+usermod -aG docker ec2-user
+sed 's/OPTIONS="\(.*\)"/OPTIONS="\1 -H tcp:\/\/0.0.0.0:2376"/' /etc/sysconfig/docker
+
